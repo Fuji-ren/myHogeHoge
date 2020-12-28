@@ -9,6 +9,6 @@
 
 @implementation myHogeHoge
 - (NSString *)text {
-    return @"hogehoge11";
+    return @"hogehoge";
 }
 @end
