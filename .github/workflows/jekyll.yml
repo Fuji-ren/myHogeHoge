@@ -13,6 +13,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: test
-      run: |
-        fastlane scan
+    - run: fastlane scan
+    - run: mkdir uploadDir
+    - run: echo hello > uploadDir/world.txt  
+
+    - uses: actions/upload-artifact@v2
+    with:
+    name: my-artifact
+    path: uploadDir/world.txt
